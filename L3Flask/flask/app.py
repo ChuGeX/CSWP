@@ -6,6 +6,6 @@ app = Flask(__name__)
 def index():
     return "Hello, world!"
 
-@app.route("/david")
-def david():
-    return "Hello, David!"
+@app.route("/<string:name>")
+def hello(name):
+    return f"Hello, {name}!"
